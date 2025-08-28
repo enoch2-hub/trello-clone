@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { DragDropContext } from 'react-beautiful-dnd';
+// import { DragDropContext } from 'react-beautiful-dnd';
+import { DragDropContext } from '@hello-pangea/dnd';
 import initialData from './data';
 import List from './List';
 

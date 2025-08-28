@@ -1,9 +1,10 @@
 import React from 'react';
-import { Draggable } from 'react-beautiful-dnd';
+// import { Draggable } from 'react-beautiful-dnd';
+import { Droppable } from '@hello-pangea/dnd';
 
 function Task({ task, index }) {
   return (
-    <Draggable draggableId={task.id} index={index}>
+    <Droppable draggableId={task.id} index={index}>
       {(provided) => (
         <div
           ref={provided.innerRef}
@@ -21,7 +22,7 @@ function Task({ task, index }) {
           {task.content}
         </div>
       )}
-    </Draggable>
+    </Droppable>
   );
 }
 

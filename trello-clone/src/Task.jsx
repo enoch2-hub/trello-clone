@@ -1,5 +1,6 @@
 import React from 'react';
-import { Draggable } from 'react-beautiful-dnd';
+// import { Draggable } from 'react-beautiful-dnd';
+import { Draggable } from '@hello-pangea/dnd';
 
 function Task({ task, index }) {
   return (
