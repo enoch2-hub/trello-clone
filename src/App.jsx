@@ -148,7 +148,7 @@ function App() {
           {data.listOrder.map((listId) => {
             const list = data.lists[listId];
             const tasks = list.taskIds.map((taskId) => data.tasks[taskId]);
-            return <List key={list.id} list={list} tasks={tasks} addTask={addTask} />;
+            return <List key={list.id} list={list} tasks={tasks} addTask={addTask} isDarkMode={isDarkMode} />;
           })}
           <NewListForm addList={addList} />
         </div>
