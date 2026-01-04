@@ -41,6 +41,16 @@ function App() {
     }
   };
 
+  const [isDarkMode, setIsDarkMode] = useState(() => {
+    return localStorage.getItem('trello-dark-mode') === 'true';
+  });
+
+  useEffect(()=> {
+    localStorage.setItem('trello-darak-mode', isDarkMode)
+  }, [isDarkMode]);
+
+  const toggleDarkMode = () => setIsDarkMode(!isDarkMode);
+
   const removeWallpaper = () => {
     setBgImage(null);
     localStorage.removeItem('trello-bg-image');
