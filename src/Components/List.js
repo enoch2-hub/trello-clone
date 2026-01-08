@@ -5,7 +5,7 @@ import { Droppable } from '@hello-pangea/dnd';
 import Task from '../Task';
 import NewTaskForm from './NewTaskForm'; // Import the new component
 
-function List({ list, tasks, addTask }) { // Receive addTask prop
+function List({ list, tasks, addTask, isDarkMode }) { // Receive addTask prop
   return (
     <div
       style={{
@@ -15,10 +15,11 @@ function List({ list, tasks, addTask }) { // Receive addTask prop
         width: '272px',
         display: 'flex',
         flexDirection: 'column',
-        backgroundColor: '#ebecf0',
+        backgroundColor: isDarkMode ? '#161a1d':'#ebecf0',
+        transition: 'background-color 0.3s ease'
       }}
     >
-      <h3 style={{ padding: '8px', margin: 0, fontSize: '16px' }}>{list.title}</h3>
+      <h3 style={{ padding: '8px', margin: 0, fontSize: '16px', color: isDarkMode ? '#b6c2cf':'#172b4d' }}>{list.title}</h3>
       <Droppable droppableId={list.id}>
         {(provided, snapshot) => (
           <div

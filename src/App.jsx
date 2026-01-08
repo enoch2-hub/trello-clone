@@ -117,7 +117,7 @@ function App() {
       }}
     >
       {/* Header / Toolbar */}
-      <div style={{ padding: '10px 20px', display: 'flex', gap: '10px', backgroundColor: 'rgba(0,0,0,0.3)' }}>
+      <div style={{ padding: '10px 20px', display: 'flex', gap: '10px', backgroundColor: isDarkMode ? 'rgba(0,0,0,0.8)':'rgba(0,0,0,0.3)' }}>
         <label style={{ 
           backgroundColor: '#ffffff33', 
           color: 'white', 
